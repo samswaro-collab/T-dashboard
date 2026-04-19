@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Textron | Cyient Sales Intelligence</title>
+<title>Textron — Sales Intelligence Dashboard | Cyient</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:'Segoe UI',Arial,sans-serif;background:#f0f2f5;color:#1a1a2e;display:flex;min-height:100vh;}
@@ -247,20 +247,53 @@ tr:last-child td{border:none;}
   <div class="nav-section-label">Overview</div>
   <div class="nav-item active" onclick="switchSection('overview',this)"><span class="icon">&#127968;</span> Textron Group</div>
 
-  <div class="nav-section-label">Bell Flight</div>
+  <div class="nav-section-label">Intelligence</div>
+  <div class="nav-item" onclick="switchSection('signalchain',this)"><span class="icon">&#128268;</span> Signal Chain <span class="nav-badge badge-teal" style="background:#7c3aed;color:#fff;">3</span></div>
+  <div class="nav-item" onclick="switchSection('hiring',this)"><span class="icon">&#128084;</span> Hiring Intel</div>
+  <div class="nav-item" onclick="switchSection('cyient',this)"><span class="icon">&#128200;</span> Fast-Sell Skills <span class="nav-badge badge-teal">Fit Map</span></div>
+  <div class="nav-item" onclick="switchSection('contacts',this)"><span class="icon">&#128100;</span> Key Contacts</div>
+
+  <div class="nav-section-label">Business Units</div>
+  <div class="nav-section-sublabel" style="font-size:9px;color:#94a3b8;padding:4px 16px 2px;text-transform:uppercase;letter-spacing:.5px;font-weight:700;">Bell Flight</div>
   <div class="nav-item" onclick="switchSection('bell',this)"><span class="icon">&#128641;</span> Bell Overview</div>
   <div class="nav-item" onclick="switchSection('bell-commercial',this)"><span class="icon">&#9992;</span> Commercial Helos</div>
   <div class="nav-item" onclick="switchSection('bell-military',this)"><span class="icon">&#11088;</span> Military / FLRAA <span class="nav-badge badge-high">HOT</span></div>
-
-  <div class="nav-section-label">Textron Aviation</div>
+  <div class="nav-section-sublabel" style="font-size:9px;color:#94a3b8;padding:4px 16px 2px;text-transform:uppercase;letter-spacing:.5px;font-weight:700;">Textron Aviation</div>
   <div class="nav-item" onclick="switchSection('txav',this)"><span class="icon">&#9992;</span> TxAv Overview</div>
   <div class="nav-item" onclick="switchSection('cessna',this)"><span class="icon">&#128747;</span> Cessna / Citation</div>
   <div class="nav-item" onclick="switchSection('beechcraft',this)"><span class="icon">&#128747;</span> Beechcraft / King Air</div>
   <div class="nav-item" onclick="switchSection('txav-military',this)"><span class="icon">&#128736;</span> Military Trainers</div>
   <div class="nav-item" onclick="switchSection('aftermarket',this)"><span class="icon">&#128295;</span> Aftermarket / MRO</div>
-
-  <div class="nav-section-label">Textron Systems</div>
+  <div class="nav-section-sublabel" style="font-size:9px;color:#94a3b8;padding:4px 16px 2px;text-transform:uppercase;letter-spacing:.5px;font-weight:700;">Textron Systems</div>
   <div class="nav-item" onclick="switchSection('tsystems',this)"><span class="icon">&#128737;</span> Textron Systems</div>
+
+  <div class="nav-section-label">Specialist Functions</div>
+  <div class="nav-item" onclick="switchSection('sf-digital',this)"><span class="icon">&#128187;</span> Digital Technologies</div>
+  <div class="nav-item" onclick="switchSection('sf-embedded',this)"><span class="icon">&#128736;</span> Embedded SW (DO-178)</div>
+  <div class="nav-item" onclick="switchSection('sf-hardware',this)"><span class="icon">&#128268;</span> Hardware Engineering</div>
+  <div class="nav-item" onclick="switchSection('sf-mech',this)"><span class="icon">&#128295;</span> Mech Design &amp; Stress</div>
+  <div class="nav-item" onclick="switchSection('sf-pubs',this)"><span class="icon">&#128196;</span> Tech Pubs &amp; ILS</div>
+  <div class="nav-item" onclick="switchSection('sf-cad',this)"><span class="icon">&#128395;</span> CAD Design Engineering</div>
+  <div class="nav-item" onclick="switchSection('sf-test',this)"><span class="icon">&#128300;</span> Test Engineering &amp; Lab</div>
+  <div class="nav-item" onclick="switchSection('sf-mfg',this)"><span class="icon">&#9881;</span> Process &amp; Mfg Engineering</div>
+  <div class="nav-item" onclick="switchSection('sf-pe',this)"><span class="icon">&#128203;</span> Project Engineering (PE)</div>
+  <div class="nav-section-sublabel" style="font-size:9px;color:#94a3b8;padding:4px 16px 2px;text-transform:uppercase;letter-spacing:.5px;font-weight:700;">Textron-Specific</div>
+  <div class="nav-item" onclick="switchSection('sf-systems',this)"><span class="icon">&#127760;</span> Systems Eng (MBSE) <span class="nav-badge badge-high">NEW</span></div>
+  <div class="nav-item" onclick="switchSection('sf-uas',this)"><span class="icon">&#129724;</span> Autonomous &amp; UAS <span class="nav-badge badge-high">NEW</span></div>
+  <div class="nav-item" onclick="switchSection('sf-mro',this)"><span class="icon">&#128736;</span> Sustainment &amp; MRO Eng <span class="nav-badge badge-high">NEW</span></div>
+  <div class="nav-item" onclick="switchSection('sf-cert',this)"><span class="icon">&#128203;</span> Certification Eng (FAA/DER) <span class="nav-badge badge-high">NEW</span></div>
+
+  <div class="nav-section-label">Partnerships</div>
+  <div class="nav-item" onclick="switchSection('partners',this)"><span class="icon">&#129309;</span> Partnerships &amp; Alliances</div>
+
+  <div class="nav-section-label">Outreach</div>
+  <div class="nav-item" onclick="switchSection('outreach',this)"><span class="icon">&#129309;</span> Outreach Playbook <span class="nav-badge badge-med">Cold→Warm</span></div>
+
+  <div class="nav-section-label">Competitive Intel</div>
+  <div class="nav-item" onclick="switchSection('compintel',this)"><span class="icon">&#128202;</span> Competitive Intel</div>
+
+  <div class="nav-section-label">Events</div>
+  <div class="nav-item" onclick="switchSection('events',this)"><span class="icon">&#128197;</span> Industry Events</div>
 
   <!-- OPEN ROLES BY SKILL -->
   <div class="sr-block">
@@ -340,17 +373,6 @@ tr:last-child td{border:none;}
 
     <div class="sr-clear" onclick="filterHiring(null)">&#10005; clear filter &amp; show all</div>
   </div>
-
-  <!-- STRATEGY -->
-  <div class="nav-section-label">Strategy</div>
-  <div class="nav-item" onclick="switchSection('cyient',this)"><span class="icon">&#128200;</span> Cyient Fit <span class="nav-badge badge-teal">Fit Map</span></div>
-  <div class="nav-item" onclick="switchSection('contacts',this)"><span class="icon">&#128100;</span> Key Contacts</div>
-  <div class="nav-item" onclick="switchSection('outreach',this)"><span class="icon">&#129309;</span> Outreach Playbook <span class="nav-badge badge-med">Cold→Warm</span></div>
-  <div class="nav-item" onclick="switchSection('hiring',this)"><span class="icon">&#128084;</span> Hiring Intel</div>
-  <div class="nav-item" onclick="switchSection('sec-signalchain',this)"><span class="icon">&#128268;</span> Signal Chain <span class="nav-badge badge-teal" style="background:#7c3aed;color:#fff;">3</span></div>
-  <div class="nav-item" onclick="switchSection('partners',this)"><span class="icon">&#129309;</span> Partnerships &amp; Alliances</div>
-  <div class="nav-item" onclick="switchSection('events',this)"><span class="icon">&#128197;</span> Industry Events</div>
-  <div class="nav-item" onclick="switchSection('compintel',this)"><span class="icon">&#128202;</span> Competitive Intel</div>
 </div>
 
 <!-- MAIN -->
@@ -365,7 +387,7 @@ tr:last-child td{border:none;}
 
   <div id="header">
     <div class="header-title-block">
-      <h1>Textron — Sales Intelligence</h1>
+      <h1>Textron — Sales Intelligence Dashboard</h1>
       <span>Bell Flight &bull; Textron Aviation &bull; Textron Systems</span>
     </div>
     <div class="header-center">
@@ -2321,6 +2343,383 @@ tr:last-child td{border:none;}
       </div>
 
     </div><!-- /sec-signalchain -->
+
+    <!-- ═══════════════ SPECIALIST FUNCTIONS ═══════════════ -->
+
+    <!-- SF: DIGITAL TECHNOLOGIES -->
+    <div id="sec-sf-digital" class="section">
+      <div style="padding:24px 28px;">
+        <div style="border-left:4px solid #6366f1;padding-left:16px;margin-bottom:20px;">
+          <h2 style="font-size:18px;font-weight:800;color:#0f172a;margin:0 0 4px;">&#128187; Digital Technologies — Textron</h2>
+          <p style="font-size:12px;color:#64748b;margin:0;">Digital transformation, PLM/PDM, MES/MOM, cloud migration and data analytics across Bell Flight, Textron Aviation and Textron Systems.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:18px;">
+          <div style="background:#f8fafc;border-radius:8px;padding:14px;border:1px solid #e2e8f0;">
+            <div style="font-size:10px;font-weight:700;color:#6366f1;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Bell Flight</div>
+            <div style="font-size:12px;color:#374151;margin-bottom:8px;">Migrating CATIA V5→V6/3DEXP; Windchill PDMLink rollout for FLRAA program. Digital thread initiative across M&amp;S tools.</div>
+            <div style="background:#ede9fe;border-radius:4px;padding:6px 8px;font-size:11px;color:#5b21b6;font-weight:600;">~30+ open roles</div>
+          </div>
+          <div style="background:#f8fafc;border-radius:8px;padding:14px;border:1px solid #e2e8f0;">
+            <div style="font-size:10px;font-weight:700;color:#6366f1;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Textron Aviation</div>
+            <div style="font-size:12px;color:#374151;margin-bottom:8px;">SAP S/4HANA migration, ENOVIA / 3DEXP PLM, MES for Wichita production lines. Digital twin for T-6 sustainment analytics.</div>
+            <div style="background:#ede9fe;border-radius:4px;padding:6px 8px;font-size:11px;color:#5b21b6;font-weight:600;">~25+ open roles</div>
+          </div>
+          <div style="background:#f8fafc;border-radius:8px;padding:14px;border:1px solid #e2e8f0;">
+            <div style="font-size:10px;font-weight:700;color:#6366f1;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Textron Systems</div>
+            <div style="font-size:12px;color:#374151;margin-bottom:8px;">Model-based systems engineering (MBSE) toolchain, simulation/HIL lab data management, cloud-based test data analytics.</div>
+            <div style="background:#ede9fe;border-radius:4px;padding:6px 8px;font-size:11px;color:#5b21b6;font-weight:600;">~15+ open roles</div>
+          </div>
+        </div>
+        <div style="background:#f0fdf4;border-radius:8px;padding:14px;border:1px solid #bbf7d0;">
+          <div style="font-size:11px;font-weight:700;color:#15803d;margin-bottom:6px;">✅ Cyient Capability &amp; Entry Angle</div>
+          <div style="font-size:12px;color:#374151;">Cyient's DLM (Digital, Lyf Sciences, and Manufacturing) team has deep Dassault / Windchill / SAP PLM delivery credentials. Lead with FLRAA digital thread opportunity at Bell (Fort Worth) — Cyient has active PLM delivery at competing aerospace accounts. Offer a rapid 6-week PLM health assessment as a door-opener.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SF: EMBEDDED SW (DO-178) -->
+    <div id="sec-sf-embedded" class="section">
+      <div style="padding:24px 28px;">
+        <div style="border-left:4px solid #0891b2;padding-left:16px;margin-bottom:20px;">
+          <h2 style="font-size:18px;font-weight:800;color:#0f172a;margin:0 0 4px;">&#128736; Embedded SW (DO-178C) — Textron</h2>
+          <p style="font-size:12px;color:#64748b;margin:0;">Safety-critical avionics software development, verification &amp; validation under DO-178C/ED-12C across Bell and Textron Aviation flight control and mission systems.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:18px;">
+          <div style="background:#f8fafc;border-radius:8px;padding:14px;border:1px solid #e2e8f0;">
+            <div style="font-size:10px;font-weight:700;color:#0891b2;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Bell Flight — FLRAA / V-280</div>
+            <div style="font-size:12px;color:#374151;margin-bottom:8px;">Flight management computer, fly-by-wire software V&amp;V. JFTP / V-280 program requires DO-178C DAL A/B qualified team. ~20 open SW roles in Fort Worth.</div>
+            <div style="background:#ecfeff;border-radius:4px;padding:6px 8px;font-size:11px;color:#0e7490;font-weight:600;">~20+ open roles · Fort Worth</div>
+          </div>
+          <div style="background:#f8fafc;border-radius:8px;padding:14px;border:1px solid #e2e8f0;">
+            <div style="font-size:10px;font-weight:700;color:#0891b2;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Textron Aviation — Cessna / Citation</div>
+            <div style="font-size:12px;color:#374151;margin-bottom:8px;">Garmin G5000/G3000 integration software, avionics certification support. T-6A ACES safety software maintenance for USAF AFWERX contracts. ~25 open roles in Wichita.</div>
+            <div style="background:#ecfeff;border-radius:4px;padding:6px 8px;font-size:11px;color:#0e7490;font-weight:600;">~25+ open roles · Wichita</div>
+          </div>
+        </div>
+        <div style="background:#f0fdf4;border-radius:8px;padding:14px;border:1px solid #bbf7d0;">
+          <div style="font-size:11px;font-weight:700;color:#15803d;margin-bottom:6px;">✅ Cyient Capability &amp; Entry Angle</div>
+          <div style="font-size:12px;color:#374151;">Cyient holds DO-178C DAL A credentials with qualified DERs. Offer to augment Bell's V&amp;V team on FLRAA FMC — position as an overflow capacity provider. In Wichita, lead with T-6 avionics sustaining SW — long-tail MRO contract with USAF creates 5-year demand.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SF: HARDWARE ENGINEERING -->
+    <div id="sec-sf-hardware" class="section">
+      <div style="padding:24px 28px;">
+        <div style="border-left:4px solid #7c3aed;padding-left:16px;margin-bottom:20px;">
+          <h2 style="font-size:18px;font-weight:800;color:#0f172a;margin:0 0 4px;">&#128268; Hardware Engineering — Textron</h2>
+          <p style="font-size:12px;color:#64748b;margin:0;">Electronics hardware design, PCB/PCBA layout, EMI/EMC, power systems, and avionics LRU development across Bell, Textron Aviation, and Textron Systems.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:18px;">
+          <div style="background:#f8fafc;border-radius:8px;padding:14px;border:1px solid #e2e8f0;">
+            <div style="font-size:10px;font-weight:700;color:#7c3aed;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Bell — Avionics HW</div>
+            <div style="font-size:12px;color:#374151;margin-bottom:8px;">FPGA-based mission computer hardware, rugged LRU packaging for rotorcraft. V-280 program drives ~15 HW engineering roles in Fort Worth.</div>
+            <div style="background:#f5f3ff;border-radius:4px;padding:6px 8px;font-size:11px;color:#6d28d9;font-weight:600;">~15+ roles · Fort Worth</div>
+          </div>
+          <div style="background:#f8fafc;border-radius:8px;padding:14px;border:1px solid #e2e8f0;">
+            <div style="font-size:10px;font-weight:700;color:#7c3aed;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">TxAv — Avionics Integration</div>
+            <div style="font-size:12px;color:#374151;margin-bottom:8px;">Cockpit display unit integration, wiring harness design/analysis for Cessna/Citation and Beechcraft platforms. Garmin G-series HW validation.</div>
+            <div style="background:#f5f3ff;border-radius:4px;padding:6px 8px;font-size:11px;color:#6d28d9;font-weight:600;">~10+ roles · Wichita</div>
+          </div>
+          <div style="background:#f8fafc;border-radius:8px;padding:14px;border:1px solid #e2e8f0;">
+            <div style="font-size:10px;font-weight:700;color:#7c3aed;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">TxSystems — UAS Electronics</div>
+            <div style="font-size:12px;color:#374151;margin-bottom:8px;">SWAP-constrained electronics for Aerosonde/SHADOW UAS. EW payload electronics, datalink HW. ~10 HW roles across Hunt Valley &amp; Arlington.</div>
+            <div style="background:#f5f3ff;border-radius:4px;padding:6px 8px;font-size:11px;color:#6d28d9;font-weight:600;">~10+ roles · Hunt Valley</div>
+          </div>
+        </div>
+        <div style="background:#f0fdf4;border-radius:8px;padding:14px;border:1px solid #bbf7d0;">
+          <div style="font-size:11px;font-weight:700;color:#15803d;margin-bottom:6px;">✅ Cyient Capability &amp; Entry Angle</div>
+          <div style="font-size:12px;color:#374151;">Cyient's embedded electronics and EMS team offers PCB design-to-manufacture capability including DO-160 environmental qualification. Propose a pilot on V-280 avionics LRU PCB layout — low-risk entry with high visibility to the FLRAA program office.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SF: MECH DESIGN & STRESS -->
+    <div id="sec-sf-mech" class="section">
+      <div style="padding:24px 28px;">
+        <div style="border-left:4px solid #dc2626;padding-left:16px;margin-bottom:20px;">
+          <h2 style="font-size:18px;font-weight:800;color:#0f172a;margin:0 0 4px;">&#128295; Mechanical Design &amp; Stress — Textron</h2>
+          <p style="font-size:12px;color:#64748b;margin:0;">Rotorcraft and fixed-wing airframe structural design, stress analysis (linear/nonlinear FEA), rotor systems, fatigue and damage tolerance across Bell and Textron Aviation.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:18px;">
+          <div style="background:#f8fafc;border-radius:8px;padding:14px;border:1px solid #e2e8f0;">
+            <div style="font-size:10px;font-weight:700;color:#dc2626;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Bell Flight — Rotor &amp; Structures</div>
+            <div style="font-size:12px;color:#374151;margin-bottom:8px;">Rotor hub/blade stress, proprotor aeroelastic analysis for FLRAA, tiltrotor conversion mechanism fatigue. CATIA V5/V6 + NASTRAN/ABAQUS stack. ~20+ roles in Fort Worth, Amarillo.</div>
+            <div style="background:#fef2f2;border-radius:4px;padding:6px 8px;font-size:11px;color:#b91c1c;font-weight:600;">~20+ roles · Fort Worth / Amarillo</div>
+          </div>
+          <div style="background:#f8fafc;border-radius:8px;padding:14px;border:1px solid #e2e8f0;">
+            <div style="font-size:10px;font-weight:700;color:#dc2626;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Textron Aviation — Airframe Structures</div>
+            <div style="font-size:12px;color:#374151;margin-bottom:8px;">Wing/fuselage static and fatigue analysis for Cessna Citation and Beechcraft. DT/SFC analysis for aging fleet sustaining programs. ~35 roles in Wichita — highest single concentration.</div>
+            <div style="background:#fef2f2;border-radius:4px;padding:6px 8px;font-size:11px;color:#b91c1c;font-weight:600;">~35+ roles · Wichita (highest demand)</div>
+          </div>
+        </div>
+        <div style="background:#f0fdf4;border-radius:8px;padding:14px;border:1px solid #bbf7d0;">
+          <div style="font-size:11px;font-weight:700;color:#15803d;margin-bottom:6px;">✅ Cyient Capability &amp; Entry Angle</div>
+          <div style="font-size:12px;color:#374151;">Cyient's Wichita-area presence plus NASTRAN/CATIA certified engineers makes this the highest-probability fast-close opportunity. Lead with Cessna Citation wing stress augmentation — propose a 10-person offshore + 2 onsite blended team model. Rotor stress at Bell is a secondary pitch leveraging Cyient's Collins rotor delivery experience.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SF: TECH PUBS & ILS -->
+    <div id="sec-sf-pubs" class="section">
+      <div style="padding:24px 28px;">
+        <div style="border-left:4px solid #0284c7;padding-left:16px;margin-bottom:20px;">
+          <h2 style="font-size:18px;font-weight:800;color:#0f172a;margin:0 0 4px;">&#128196; Tech Pubs &amp; ILS — Textron</h2>
+          <p style="font-size:12px;color:#64748b;margin:0;">Technical publications (AMMs, CMMs, IPC, wiring manuals), S1000D authoring, illustrated parts catalogues, and Integrated Logistics Support across Bell and Textron Aviation aftermarket.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:18px;">
+          <div style="background:#f8fafc;border-radius:8px;padding:14px;border:1px solid #e2e8f0;">
+            <div style="font-size:10px;font-weight:700;color:#0284c7;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Bell — Military Pubs (S1000D)</div>
+            <div style="font-size:12px;color:#374151;margin-bottom:8px;">Army AH-1Z/UH-1Y technical manuals, FLRAA TM development as program matures. S1000D Issue 4.1 compliance. ~8 roles in Fort Worth.</div>
+            <div style="background:#e0f2fe;border-radius:4px;padding:6px 8px;font-size:11px;color:#0369a1;font-weight:600;">~8+ roles · Fort Worth</div>
+          </div>
+          <div style="background:#f8fafc;border-radius:8px;padding:14px;border:1px solid #e2e8f0;">
+            <div style="font-size:10px;font-weight:700;color:#0284c7;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Textron Aviation — Commercial Pubs</div>
+            <div style="font-size:12px;color:#374151;margin-bottom:8px;">ATA iSpec2200 maintenance manuals for Citation/King Air global fleet. IPC authoring, MSG-3 analysis for scheduled maintenance revisions. ~20 roles in Wichita.</div>
+            <div style="background:#e0f2fe;border-radius:4px;padding:6px 8px;font-size:11px;color:#0369a1;font-weight:600;">~20+ roles · Wichita</div>
+          </div>
+        </div>
+        <div style="background:#f0fdf4;border-radius:8px;padding:14px;border:1px solid #bbf7d0;">
+          <div style="font-size:11px;font-weight:700;color:#15803d;margin-bottom:6px;">✅ Cyient Capability &amp; Entry Angle</div>
+          <div style="font-size:12px;color:#374151;">Cyient's Tech Pubs CoE (Hyderabad) delivers iSpec2200 and S1000D at scale for Embraer and ATR — direct parallel to TxAv commercial fleet. Offer a pilot rewrite of one AMM chapter for Citation latitude series to demonstrate turnaround speed and quality. ILS gap analysis for FLRAA is a medium-term upsell.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SF: CAD DESIGN ENGINEERING -->
+    <div id="sec-sf-cad" class="section">
+      <div style="padding:24px 28px;">
+        <div style="border-left:4px solid #0f766e;padding-left:16px;margin-bottom:20px;">
+          <h2 style="font-size:18px;font-weight:800;color:#0f172a;margin:0 0 4px;">&#128395; CAD Design Engineering — Textron</h2>
+          <p style="font-size:12px;color:#64748b;margin:0;">3D detailed design, GD&amp;T, wiring harness design, CATIA V5/V6/3DEXP, SolidWorks and NX model creation across all three Textron business units.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:18px;">
+          <div style="background:#f8fafc;border-radius:8px;padding:14px;border:1px solid #e2e8f0;">
+            <div style="font-size:10px;font-weight:700;color:#0f766e;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Bell — CATIA V5/3DEXP</div>
+            <div style="font-size:12px;color:#374151;margin-bottom:8px;">Proprotor nacelle detailed design, V-280 fuselage panels, CATIA V5→3DExperience migration. ~15 roles in Fort Worth/Amarillo.</div>
+            <div style="background:#f0fdfa;border-radius:4px;padding:6px 8px;font-size:11px;color:#0f766e;font-weight:600;">~15+ roles · Fort Worth</div>
+          </div>
+          <div style="background:#f8fafc;border-radius:8px;padding:14px;border:1px solid #e2e8f0;">
+            <div style="font-size:10px;font-weight:700;color:#0f766e;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">TxAv — CATIA / SolidWorks</div>
+            <div style="font-size:12px;color:#374151;margin-bottom:8px;">Cessna Citation interior and systems design, King Air cabin modifications, military trainer geometry updates. Predominantly CATIA + NX. ~20 roles in Wichita.</div>
+            <div style="background:#f0fdfa;border-radius:4px;padding:6px 8px;font-size:11px;color:#0f766e;font-weight:600;">~20+ roles · Wichita</div>
+          </div>
+          <div style="background:#f8fafc;border-radius:8px;padding:14px;border:1px solid #e2e8f0;">
+            <div style="font-size:10px;font-weight:700;color:#0f766e;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">TxSystems — SolidWorks/Creo</div>
+            <div style="font-size:12px;color:#374151;margin-bottom:8px;">UAS airframe and ground vehicle (TAPV/Ripsaw) chassis 3D design. SolidWorks/Creo dominant. ~10 roles across Hunt Valley &amp; Wilmington.</div>
+            <div style="background:#f0fdfa;border-radius:4px;padding:6px 8px;font-size:11px;color:#0f766e;font-weight:600;">~10+ roles · Hunt Valley</div>
+          </div>
+        </div>
+        <div style="background:#f0fdf4;border-radius:8px;padding:14px;border:1px solid #bbf7d0;">
+          <div style="font-size:11px;font-weight:700;color:#15803d;margin-bottom:6px;">✅ Cyient Capability &amp; Entry Angle</div>
+          <div style="font-size:12px;color:#374151;">Cyient Design Engineering CoE (Hyderabad + Pune) has 500+ CATIA-certified designers. Lead with a Citation cabin detailed design offload — highly repetitive, repeatable, and volume-scalable. This is a classic Cyient sweet spot; propose 5 offshore designers in a 60-day trial sprint.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SF: TEST ENGINEERING & LAB -->
+    <div id="sec-sf-test" class="section">
+      <div style="padding:24px 28px;">
+        <div style="border-left:4px solid #ea580c;padding-left:16px;margin-bottom:20px;">
+          <h2 style="font-size:18px;font-weight:800;color:#0f172a;margin:0 0 4px;">&#128300; Test Engineering &amp; Lab — Textron</h2>
+          <p style="font-size:12px;color:#64748b;margin:0;">Ground test, rig test, flight test instrumentation, test plan/report authoring, HIL/SIL simulation test, and DO-160 environmental qualification testing across Textron BUs.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:18px;">
+          <div style="background:#f8fafc;border-radius:8px;padding:14px;border:1px solid #e2e8f0;">
+            <div style="font-size:10px;font-weight:700;color:#ea580c;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Bell — Flight Test / HIL</div>
+            <div style="font-size:12px;color:#374151;margin-bottom:8px;">V-280 / FLRAA flight test engineering: FTI design, data acquisition, chase-plane telemetry analysis. HIL rigs for fly-by-wire SCAS validation. ~12 roles in Fort Worth &amp; Amarillo.</div>
+            <div style="background:#fff7ed;border-radius:4px;padding:6px 8px;font-size:11px;color:#c2410c;font-weight:600;">~12+ roles · Fort Worth / Amarillo</div>
+          </div>
+          <div style="background:#f8fafc;border-radius:8px;padding:14px;border:1px solid #e2e8f0;">
+            <div style="font-size:10px;font-weight:700;color:#ea580c;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">TxSystems — UAS/EW Test</div>
+            <div style="font-size:12px;color:#374151;margin-bottom:8px;">Aerosonde/SHADOW flight envelope expansion test, Ripsaw live-fire system tests, EW jammer performance characterization. RF anechoic and EMC test lab in Hunt Valley. ~10 roles.</div>
+            <div style="background:#fff7ed;border-radius:4px;padding:6px 8px;font-size:11px;color:#c2410c;font-weight:600;">~10+ roles · Hunt Valley</div>
+          </div>
+        </div>
+        <div style="background:#f0fdf4;border-radius:8px;padding:14px;border:1px solid #bbf7d0;">
+          <div style="font-size:11px;font-weight:700;color:#15803d;margin-bottom:6px;">✅ Cyient Capability &amp; Entry Angle</div>
+          <div style="font-size:12px;color:#374151;">Cyient's Test &amp; Verification practice has delivered HIL/SIL rig builds at major aerospace primes. Propose a FLRAA SCAS HIL augmentation — provide 2–3 onsite FTE plus offshore data analysis team. DO-160 qualification testing for TxAv avionics LRUs is an adjacent upsell requiring minimal ramp time.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SF: PROCESS & MFG ENGINEERING -->
+    <div id="sec-sf-mfg" class="section">
+      <div style="padding:24px 28px;">
+        <div style="border-left:4px solid #854d0e;padding-left:16px;margin-bottom:20px;">
+          <h2 style="font-size:18px;font-weight:800;color:#0f172a;margin:0 0 4px;">&#9881; Process &amp; Manufacturing Engineering — Textron</h2>
+          <p style="font-size:12px;color:#64748b;margin:0;">Manufacturing process planning, NC programming, tooling design, AS9100/NADCAP compliance, lean/value-stream and digital MES/MOM implementation across Textron Aviation and Bell assembly lines.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:18px;">
+          <div style="background:#f8fafc;border-radius:8px;padding:14px;border:1px solid #e2e8f0;">
+            <div style="font-size:10px;font-weight:700;color:#854d0e;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Textron Aviation — Wichita Mfg</div>
+            <div style="font-size:12px;color:#374151;margin-bottom:8px;">Cessna and Beechcraft final assembly process planning, composite structure process sheets, CNC programming for fuselage skins. AS9100D / NADCAP certified facility. ~20 mfg engineering roles in Wichita.</div>
+            <div style="background:#fef9c3;border-radius:4px;padding:6px 8px;font-size:11px;color:#854d0e;font-weight:600;">~20+ roles · Wichita</div>
+          </div>
+          <div style="background:#f8fafc;border-radius:8px;padding:14px;border:1px solid #e2e8f0;">
+            <div style="font-size:10px;font-weight:700;color:#854d0e;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Bell — Amarillo Assembly</div>
+            <div style="font-size:12px;color:#374151;margin-bottom:8px;">UH-1Y/AH-1Z completion center process engineering, V-280 initial production readiness. Lean manufacturing implementation for FLRAA rate ramp. ~10 mfg roles in Amarillo.</div>
+            <div style="background:#fef9c3;border-radius:4px;padding:6px 8px;font-size:11px;color:#854d0e;font-weight:600;">~10+ roles · Amarillo</div>
+          </div>
+        </div>
+        <div style="background:#f0fdf4;border-radius:8px;padding:14px;border:1px solid #bbf7d0;">
+          <div style="font-size:11px;font-weight:700;color:#15803d;margin-bottom:6px;">✅ Cyient Capability &amp; Entry Angle</div>
+          <div style="font-size:12px;color:#374151;">Cyient's Manufacturing Engineering practice delivers process planning and CNC programming offload at Airbus and GE Aviation suppliers — credible proof points for Textron. Lead with a TxAv composite process sheet digitization pilot: convert legacy paper process sheets to digital (MES-linked) format. Low-cost, fast-win, high-retention engagement type.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SF: PROJECT ENGINEERING (PE) -->
+    <div id="sec-sf-pe" class="section">
+      <div style="padding:24px 28px;">
+        <div style="border-left:4px solid #475569;padding-left:16px;margin-bottom:20px;">
+          <h2 style="font-size:18px;font-weight:800;color:#0f172a;margin:0 0 4px;">&#128203; Project Engineering (PE) — Textron</h2>
+          <p style="font-size:12px;color:#64748b;margin:0;">Program/project engineering management, schedule management (EVMS), engineering change management, IMS baseline maintenance, and technical integration across all three Textron business units.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:18px;">
+          <div style="background:#f8fafc;border-radius:8px;padding:14px;border:1px solid #e2e8f0;">
+            <div style="font-size:10px;font-weight:700;color:#475569;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Bell — FLRAA / JFTP</div>
+            <div style="font-size:12px;color:#374151;margin-bottom:8px;">EVMS-compliant IMS, engineering change order (ECO) management for $1.3B FLRAA EMD phase. DCMA reporting. ~15 PE roles in Fort Worth.</div>
+            <div style="background:#f1f5f9;border-radius:4px;padding:6px 8px;font-size:11px;color:#334155;font-weight:600;">~15+ roles · Fort Worth</div>
+          </div>
+          <div style="background:#f8fafc;border-radius:8px;padding:14px;border:1px solid #e2e8f0;">
+            <div style="font-size:10px;font-weight:700;color:#475569;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">TxAv — Certification PE</div>
+            <div style="font-size:12px;color:#374151;margin-bottom:8px;">DER coordination, FAA compliance matrix management for new TCA certifications. T-6 SEPM contract project management. ~25 PE roles in Wichita.</div>
+            <div style="background:#f1f5f9;border-radius:4px;padding:6px 8px;font-size:11px;color:#334155;font-weight:600;">~25+ roles · Wichita</div>
+          </div>
+          <div style="background:#f8fafc;border-radius:8px;padding:14px;border:1px solid #e2e8f0;">
+            <div style="font-size:10px;font-weight:700;color:#475569;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">TxSystems — Program Mgmt</div>
+            <div style="font-size:12px;color:#374151;margin-bottom:8px;">SHADOW/Aerosonde program management, CDRR milestone management, contractor logistics support (CLS) program engineering. ~10 roles across Hunt Valley &amp; Arlington.</div>
+            <div style="background:#f1f5f9;border-radius:4px;padding:6px 8px;font-size:11px;color:#334155;font-weight:600;">~10+ roles · Hunt Valley</div>
+          </div>
+        </div>
+        <div style="background:#f0fdf4;border-radius:8px;padding:14px;border:1px solid #bbf7d0;">
+          <div style="font-size:11px;font-weight:700;color:#15803d;margin-bottom:6px;">✅ Cyient Capability &amp; Entry Angle</div>
+          <div style="font-size:12px;color:#374151;">Cyient's Project Engineering team provides embedded PEs who work within customer IMS and EVMS frameworks. Offer 2–3 TxAv-embedded PEs for T-6 SEPM contract execution support — a natural fit given the 5-year $150M contract timeline. FLRAA EVMS augmentation is a longer-cycle but higher-value opportunity.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SF: SYSTEMS ENGINEERING (MBSE) — TEXTRON-SPECIFIC -->
+    <div id="sec-sf-systems" class="section">
+      <div style="padding:24px 28px;">
+        <div style="border-left:4px solid #be185d;padding-left:16px;margin-bottom:20px;">
+          <h2 style="font-size:18px;font-weight:800;color:#0f172a;margin:0 0 4px;">&#127760; Systems Engineering (MBSE/SysML) — Textron <span style="background:#fce7f3;color:#be185d;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;vertical-align:middle;">NEW BUCKET</span></h2>
+          <p style="font-size:12px;color:#64748b;margin:0;">Model-Based Systems Engineering (MBSE) using CAMEO/MagicDraw and SysML for requirements traceability, system architecture definition, and interface management across Bell FLRAA and Textron Systems programs.</p>
+        </div>
+        <div style="background:#fff0f9;border:1px solid #fbcfe8;border-radius:8px;padding:10px 14px;margin-bottom:14px;font-size:11px;color:#be185d;">
+          <strong>📌 Why Textron-specific:</strong> MBSE/SysML capability is not explicitly listed in the RTX Specialist Functions buckets but is a dominant hiring theme at Bell (FLRAA system-of-systems) and Textron Systems (autonomous systems architecture). Qualifies as a standalone bucket at Textron.
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:18px;">
+          <div style="background:#f8fafc;border-radius:8px;padding:14px;border:1px solid #e2e8f0;">
+            <div style="font-size:10px;font-weight:700;color:#be185d;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Bell — FLRAA System Architecture</div>
+            <div style="font-size:12px;color:#374151;margin-bottom:8px;">Bell recruiting "Systems Engineers – MBSE" with CAMEO/SysML for FLRAA V-280 program. Requirements traceability, ICD management, and system-of-systems interface definition. ~15 SE/MBSE roles in Fort Worth.</div>
+            <div style="background:#fce7f3;border-radius:4px;padding:6px 8px;font-size:11px;color:#9d174d;font-weight:600;">~15+ roles · Fort Worth (CONFIRMED)</div>
+          </div>
+          <div style="background:#f8fafc;border-radius:8px;padding:14px;border:1px solid #e2e8f0;">
+            <div style="font-size:10px;font-weight:700;color:#be185d;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Textron Systems — 43+ SE Roles</div>
+            <div style="font-size:12px;color:#374151;margin-bottom:8px;">Textron Systems has 43+ active System Engineer postings across UAS, autonomous ground, and C2 programs. CAMEO, Rhapsody, and SysML proficiency required for most senior roles.</div>
+            <div style="background:#fce7f3;border-radius:4px;padding:6px 8px;font-size:11px;color:#9d174d;font-weight:600;">43+ roles · Hunt Valley / Arlington</div>
+          </div>
+        </div>
+        <div style="background:#f0fdf4;border-radius:8px;padding:14px;border:1px solid #bbf7d0;">
+          <div style="font-size:11px;font-weight:700;color:#15803d;margin-bottom:6px;">✅ Cyient Capability &amp; Entry Angle</div>
+          <div style="font-size:12px;color:#374151;">Cyient has MBSE-trained engineers (CAMEO/SysML certified) deployed at defense prime customers. This is a premium-rate engagement — position as a "Systems Architecture Support" offering rather than pure staffing. Propose a Bell FLRAA ICD management pilot: map 1 interface domain in CAMEO and demonstrate traceability to requirements. Land &amp; expand from there into full SE support team.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SF: AUTONOMOUS SYSTEMS & UAS — TEXTRON-SPECIFIC -->
+    <div id="sec-sf-uas" class="section">
+      <div style="padding:24px 28px;">
+        <div style="border-left:4px solid #0369a1;padding-left:16px;margin-bottom:20px;">
+          <h2 style="font-size:18px;font-weight:800;color:#0f172a;margin:0 0 4px;">&#129724; Autonomous Systems &amp; UAS — Textron <span style="background:#dbeafe;color:#1d4ed8;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;vertical-align:middle;">NEW BUCKET</span></h2>
+          <p style="font-size:12px;color:#64748b;margin:0;">Autonomous flight algorithms, UAS platform engineering, GNC (Guidance, Navigation &amp; Control), perception/AI, and C2 link design for Aerosonde, SHADOW, Ripsaw, and emerging next-gen programs at Textron Systems.</p>
+        </div>
+        <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:10px 14px;margin-bottom:14px;font-size:11px;color:#1e40af;">
+          <strong>📌 Why Textron-specific:</strong> Textron Systems has 50+ years of autonomous systems history — Aerosonde (Group 2 UAS), SHADOW (Group 3), Ripsaw M5/M3 (autonomous ground). This function is a dominant, standalone hiring category not captured in RTX's 9 standard buckets.
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:18px;">
+          <div style="background:#f8fafc;border-radius:8px;padding:14px;border:1px solid #e2e8f0;">
+            <div style="font-size:10px;font-weight:700;color:#0369a1;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Aerosonde / SHADOW UAS</div>
+            <div style="font-size:12px;color:#374151;margin-bottom:8px;">GNC algorithm updates, RTA (real-time autonomy) software, multi-domain payload integration. SHADOW Block 3 upgrades driving ~20 UAS engineering roles at Hunt Valley.</div>
+            <div style="background:#dbeafe;border-radius:4px;padding:6px 8px;font-size:11px;color:#1e40af;font-weight:600;">~20+ roles · Hunt Valley</div>
+          </div>
+          <div style="background:#f8fafc;border-radius:8px;padding:14px;border:1px solid #e2e8f0;">
+            <div style="font-size:10px;font-weight:700;color:#0369a1;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Ripsaw M5 — Autonomous Ground</div>
+            <div style="font-size:12px;color:#374151;margin-bottom:8px;">Autonomous ground combat vehicle (AGCV) perception stack, LiDAR/camera fusion, STANAG 4586 GCS integration. Army OMFV-adjacent program. ~15 roles in Wilmington MA / Arlington TX.</div>
+            <div style="background:#dbeafe;border-radius:4px;padding:6px 8px;font-size:11px;color:#1e40af;font-weight:600;">~15+ roles · Wilmington / Arlington</div>
+          </div>
+          <div style="background:#f8fafc;border-radius:8px;padding:14px;border:1px solid #e2e8f0;">
+            <div style="font-size:10px;font-weight:700;color:#0369a1;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Next-Gen Autonomy Programs</div>
+            <div style="font-size:12px;color:#374151;margin-bottom:8px;">Collaborative Combat Aircraft (CCA) adjacent technology development. AI/ML for target recognition, collaborative autonomy teaming. ~15 cutting-edge roles actively hired.</div>
+            <div style="background:#dbeafe;border-radius:4px;padding:6px 8px;font-size:11px;color:#1e40af;font-weight:600;">~15+ roles · Multi-site</div>
+          </div>
+        </div>
+        <div style="background:#f0fdf4;border-radius:8px;padding:14px;border:1px solid #bbf7d0;">
+          <div style="font-size:11px;font-weight:700;color:#15803d;margin-bottom:6px;">✅ Cyient Capability &amp; Entry Angle</div>
+          <div style="font-size:12px;color:#374151;">Cyient's Autonomous Systems practice (Hyderabad AI/ML lab + embedded ROS team) has delivered GNC and perception stack work for defense UAV customers. Caution: this is a classified-adjacent space — approach via unclassified engineering support roles (GNC algorithm design, SIL testing, GCS HMI) rather than the core autonomy software. Entry via SHADOW Block 3 GCS interface work is the clearest unclassified foothold.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SF: SUSTAINMENT & MRO ENGINEERING — TEXTRON-SPECIFIC -->
+    <div id="sec-sf-mro" class="section">
+      <div style="padding:24px 28px;">
+        <div style="border-left:4px solid #065f46;padding-left:16px;margin-bottom:20px;">
+          <h2 style="font-size:18px;font-weight:800;color:#0f172a;margin:0 0 4px;">&#128736; Sustainment &amp; MRO Engineering — Textron <span style="background:#d1fae5;color:#065f46;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;vertical-align:middle;">NEW BUCKET</span></h2>
+          <p style="font-size:12px;color:#64748b;margin:0;">Aircraft sustaining engineering, MRO-driven design changes, aging fleet disposition, structural repair development, service bulletin authoring, and spares provisioning across Bell and Textron Aviation.</p>
+        </div>
+        <div style="background:#ecfdf5;border:1px solid #a7f3d0;border-radius:8px;padding:10px 14px;margin-bottom:14px;font-size:11px;color:#065f46;">
+          <strong>📌 Why Textron-specific:</strong> TxAv holds a 5-year $150M T-6 Texan II Sustaining Engineering &amp; Program Management (SEPM) contract with the USAF. This creates a dedicated, long-running MRO engineering demand stream not present at this scale in RTX's standard hiring buckets.
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:18px;">
+          <div style="background:#f8fafc;border-radius:8px;padding:14px;border:1px solid #e2e8f0;">
+            <div style="font-size:10px;font-weight:700;color:#065f46;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Textron Aviation — T-6 SEPM ($150M)</div>
+            <div style="font-size:12px;color:#374151;margin-bottom:8px;">Service bulletin development, airworthiness directive compliance, structural repair development for USAF T-6A/B fleet (450+ aircraft globally). 5-year contract creates sustained hiring demand through 2028+. ~20 sustaining engineering roles in Wichita.</div>
+            <div style="background:#d1fae5;border-radius:4px;padding:6px 8px;font-size:11px;color:#065f46;font-weight:600;">~20+ roles · Wichita · Through 2028</div>
+          </div>
+          <div style="background:#f8fafc;border-radius:8px;padding:14px;border:1px solid #e2e8f0;">
+            <div style="font-size:10px;font-weight:700;color:#065f46;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Bell — Legacy Fleet Sustainment</div>
+            <div style="font-size:12px;color:#374151;margin-bottom:8px;">AH-1Z/UH-1Y aging fleet disposition planning, fatigue crack disposition, rotor component overhauling engineering. Bell Helicopter Customer Support division active. ~12 sustaining roles in Fort Worth.</div>
+            <div style="background:#d1fae5;border-radius:4px;padding:6px 8px;font-size:11px;color:#065f46;font-weight:600;">~12+ roles · Fort Worth</div>
+          </div>
+        </div>
+        <div style="background:#f0fdf4;border-radius:8px;padding:14px;border:1px solid #bbf7d0;">
+          <div style="font-size:11px;font-weight:700;color:#15803d;margin-bottom:6px;">✅ Cyient Capability &amp; Entry Angle</div>
+          <div style="font-size:12px;color:#374151;"><strong>Highest-certainty long-term engagement at TxAv.</strong> Cyient's sustaining engineering model (offshore service bulletin development + onsite liaison) is proven at ATR and Embraer. Propose a T-6 service bulletin authoring offload: 3 offshore sustaining engineers drafting SB documents against Wichita engineering decisions. Multi-year, low-risk, recurring revenue — exactly the engagement model Cyient excels at. Position this as the anchor account engagement for TxAv.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SF: CERTIFICATION ENGINEERING (FAA/DER) — TEXTRON-SPECIFIC -->
+    <div id="sec-sf-cert" class="section">
+      <div style="padding:24px 28px;">
+        <div style="border-left:4px solid #9333ea;padding-left:16px;margin-bottom:20px;">
+          <h2 style="font-size:18px;font-weight:800;color:#0f172a;margin:0 0 4px;">&#128203; Certification Engineering (FAA/DER) — Textron <span style="background:#f3e8ff;color:#7e22ce;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;vertical-align:middle;">NEW BUCKET</span></h2>
+          <p style="font-size:12px;color:#64748b;margin:0;">FAA type certification, supplemental type certificate (STC) engineering, DER-delegated compliance findings, means of compliance (MoC) documentation, and ODA unit member support across Textron Aviation.</p>
+        </div>
+        <div style="background:#faf5ff;border:1px solid #e9d5ff;border-radius:8px;padding:10px 14px;margin-bottom:14px;font-size:11px;color:#7e22ce;">
+          <strong>📌 Why Textron-specific:</strong> Textron Aviation is one of only a handful of ODA (Organization Designation Authorization) holders in GA/business aviation. The FAA ODA delegation means TxAv handles its own airworthiness certifications — creating a specialized in-house DER/ACO function not present at RTX (military prime). This bucket is distinct from DO-178C embedded SW certification.
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:18px;">
+          <div style="background:#f8fafc;border-radius:8px;padding:14px;border:1px solid #e2e8f0;">
+            <div style="font-size:10px;font-weight:700;color:#9333ea;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Part 23 — GA Aircraft Certification</div>
+            <div style="font-size:12px;color:#374151;margin-bottom:8px;">Cessna Citation M2 Gen2 / CJ series Part 23 amendments (EASA CS-23 reciprocal), STC engineering for fleet modifications. ODA Unit Member functions across structures, systems, propulsion. ~15 certification roles in Wichita.</div>
+            <div style="background:#f3e8ff;border-radius:4px;padding:6px 8px;font-size:11px;color:#7e22ce;font-weight:600;">~15+ roles · Wichita · Part 23 ODA</div>
+          </div>
+          <div style="background:#f8fafc;border-radius:8px;padding:14px;border:1px solid #e2e8f0;">
+            <div style="font-size:10px;font-weight:700;color:#9333ea;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">Part 29 — Rotorcraft Certification</div>
+            <div style="font-size:12px;color:#374151;margin-bottom:8px;">Bell Part 29 DER support for new variant type certificates and major alterations. EASA BCAR Section G reciprocal certifications for export markets. ~8 DER roles in Fort Worth.</div>
+            <div style="background:#f3e8ff;border-radius:4px;padding:6px 8px;font-size:11px;color:#7e22ce;font-weight:600;">~8+ roles · Fort Worth · Part 29 DER</div>
+          </div>
+        </div>
+        <div style="background:#f0fdf4;border-radius:8px;padding:14px;border:1px solid #bbf7d0;">
+          <div style="font-size:11px;font-weight:700;color:#15803d;margin-bottom:6px;">✅ Cyient Capability &amp; Entry Angle</div>
+          <div style="font-size:12px;color:#374151;">Cyient has FAA-designated DERs on staff (structures, systems) and has supported ODA unit member functions at multiple GA OEMs. Propose a compliance evidence package support role for a Citation STC project — low visibility, low politics, and directly uses Cyient's DER credentials. This is a niche capability few Indian ERS firms can credibly offer; position it as a differentiator in the Textron pitch.</div>
+        </div>
+      </div>
+    </div>
 
     <!-- ═══════════════ PARTNERSHIPS & ALLIANCES ═══════════════ -->
     <div id="sec-partners" class="section">
