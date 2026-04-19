@@ -2147,6 +2147,35 @@ tr:last-child td{border:none;}
 
 <script>
 
+// ── Auth Guard ──
+(function() {
+  var HUB    = 'https://www.salesbeakon.com';
+  var TOKEN  = 'bkn7x2t9p4q1m8w3e6r0y5u';
+  var LS_KEY = 'beakon_textron_gate';
+  var LS_TTL = 7 * 24 * 60 * 60 * 1000;
+  var host   = window.location.hostname;
+
+  if (host.indexOf('github.io') !== -1) {
+    window.location.replace(HUB); return;
+  }
+
+  var params   = new URLSearchParams(window.location.search);
+  var urlToken = params.get('t');
+  var stored   = null;
+  try { stored = JSON.parse(localStorage.getItem(LS_KEY) || 'null'); } catch(e) {}
+
+  var ok = false;
+  if (urlToken === TOKEN) {
+    localStorage.setItem(LS_KEY, JSON.stringify({ expires: Date.now() + LS_TTL }));
+    ok = true;
+    history.replaceState(null, '', window.location.pathname);
+  } else if (stored && stored.expires > Date.now()) {
+    ok = true;
+  }
+
+  if (!ok) { window.location.replace(HUB); }
+})();
+
 // ── Change Highlighting System ──
 (function() {
   var STORE_KEY = 'beakon_textron_last_visit';
