@@ -387,17 +387,7 @@ tr:last-child td{border:none;}
       <div class="header-logo-divider"></div>
       <!-- BEAKON Sign Out -->
       <a href="https://www.salesbeakon.com" onclick="try{localStorage.removeItem('beakon_textron_gate');}catch(e){} try{sessionStorage.removeItem('beakon_session');}catch(e){}" style="display:flex;align-items:center;gap:8px;padding:7px 14px;border:1px solid rgba(255,255,255,0.22);border-radius:8px;text-decoration:none;color:rgba(255,255,255,0.82);font-size:11px;font-weight:700;letter-spacing:.5px;white-space:nowrap;transition:all .2s;cursor:pointer;" onmouseover="this.style.background='rgba(255,255,255,0.10)';this.style.color='#fff';this.style.borderColor='rgba(255,255,255,0.4)'" onmouseout="this.style.background='transparent';this.style.color='rgba(255,255,255,0.82)';this.style.borderColor='rgba(255,255,255,0.22)'">
-        <svg width="16" height="16" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
-          <path d="M40 16 L24 3"  stroke="#f59e0b" stroke-width="3" opacity="0.7" stroke-linecap="round"/>
-          <path d="M40 16 L40 0"  stroke="#f59e0b" stroke-width="3" opacity="1"   stroke-linecap="round"/>
-          <path d="M40 16 L56 3"  stroke="#f59e0b" stroke-width="3" opacity="0.7" stroke-linecap="round"/>
-          <rect x="33" y="16" width="14" height="9" rx="2" fill="#f59e0b"/>
-          <rect x="30" y="24" width="20" height="3" rx="1.5" fill="#f59e0b" opacity="0.9"/>
-          <path d="M34 27 L30 62 L50 62 L46 27 Z" fill="#f59e0b" opacity="0.25" stroke="#f59e0b" stroke-width="2"/>
-          <path d="M33 37 L47 37" stroke="#f59e0b" stroke-width="2" opacity="0.7"/>
-          <path d="M32 47 L48 47" stroke="#f59e0b" stroke-width="2" opacity="0.7"/>
-          <rect x="25" y="62" width="30" height="5" rx="2.5" fill="#f59e0b" opacity="0.95"/>
-        </svg>
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
         <span>Sign Out</span>
       </a>
     </div>
@@ -2253,7 +2243,9 @@ tr:last-child td{border:none;}
               <div style="font-size:10px;color:#78716c;font-weight:600;text-transform:uppercase;letter-spacing:.5px;">Data Source</div>
             </div>
           </div>
-          <div style="margin-top:10px;font-size:11px;color:#78716c;line-height:1.5;" id="india-refresh-stamp">
+          
+  <div style="padding:8px 15px 4px 15px;"><div style="font-size:11px;font-weight:700;text-transform:uppercase;color:#999;margin-bottom:4px;letter-spacing:0.5px;">Financial</div><div style="padding:7px 0px;cursor:pointer;font-size:13px;color:rgba(255,255,255,0.85);" onclick="switchSection ? switchSection(event,'financial') : (document.querySelectorAll('.section').forEach(s=>s.classList.remove('active')), document.getElementById('financial')?.classList.add('active'))">💹 Financial Health</div></div>
+  <div style="margin-top:10px;font-size:11px;color:#78716c;line-height:1.5;" id="india-refresh-stamp">
             <span style="color:#92400e;font-weight:700;">⟳ Last refreshed:</span> <span id="india-refresh-date">loading…</span>
             · <span style="color:#92400e;font-weight:700;">Next:</span> <span id="india-next-refresh">—</span>
           </div>
@@ -3168,7 +3160,7 @@ tr:last-child td{border:none;}
         <div style="font-size:13px;font-weight:700;color:#0a2342;margin-bottom:6px;">🤝 PTC (Windchill — Textron Aviation)</div>
         <div style="font-size:12px;color:#444;line-height:1.65;margin-bottom:8px;">Cyient as PTC Windchill services partner for Textron Aviation. Windchill manages Cessna and Beechcraft design data — PLM upgrade, BOM management, and DO-178C digital thread for Citation Ascend avionics certification are live opportunities. Co-pitch: Windchill + Cyient for Cessna Denali turboprop certification engineering.</div>
         <div style="background:#f0f6ff;border-radius:6px;padding:7px 10px;font-size:11px;color:#0055a5;font-weight:600;">
-          👤 <strong>Rep / Contact:</strong> Search: 'PTC Textron Aviation Account Executive Wichita' on LinkedIn
+          👤 <strong>Rep / Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=PTC%20Textron%20Aviation%20Account%20Executive%20Wichita" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:5px;margin-top:8px;font-size:10px;color:#0a66c2;font-weight:600;text-decoration:none;background:#f0f7ff;padding:4px 9px;border-radius:4px;border:1px solid #c7dff7;"><svg width="14" height="14" viewBox="0 0 24 24" fill="#0a66c2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> Search on LinkedIn</a>
         </div>
       </div>
 
@@ -3183,7 +3175,7 @@ tr:last-child td{border:none;}
         </div>
         <div style="font-size:12px;color:#444;line-height:1.65;margin-bottom:8px;">Cyient's EWIS team delivers Capital-based harness design for rotorcraft at DAL-C complexity. Bell V-280 Valor is the largest active rotorcraft EWIS program in North America — 200+ wire bundles, fly-by-wire, tiltrotor power routing. Cyient Hyderabad delivers Capital schematic, harness routing, formboard, and DO-297 ICA documentation for Bell programs. Co-sell entry: via Siemens Capital AE covering Bell Fort Worth TX.</div>
         <div style="background:#f0f6ff;border-radius:6px;padding:7px 10px;font-size:11px;color:#0055a5;font-weight:600;">
-          👤 <strong>Rep / Contact:</strong> Search: 'Siemens Capital Bell Textron Account Executive Fort Worth' on LinkedIn — or via Taylor Saul (Applied CAx) who covers Siemens reseller in Bell territory
+          👤 <strong>Rep / Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Siemens%20Capital%20Bell%20Textron%20Account%20Executive%20Fort%20Worth" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:5px;margin-top:8px;font-size:10px;color:#0a66c2;font-weight:600;text-decoration:none;background:#f0f7ff;padding:4px 9px;border-radius:4px;border:1px solid #c7dff7;"><svg width="14" height="14" viewBox="0 0 24 24" fill="#0a66c2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> Search on LinkedIn</a> — or via Taylor Saul (Applied CAx) who covers Siemens reseller in Bell territory
         </div>
       </div>
 <!-- ── END TECHNOLOGY ECOSYSTEM ── -->
@@ -4116,6 +4108,68 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
+
+<!-- ═══ FINANCIAL HEALTH ═══ -->
+<div id="financial" class="section">
+  <div class="section-title" style="font-size:16px;font-weight:700;margin-bottom:16px;">💹 Financial Health — Textron Aviation</div>
+  <div style="background:linear-gradient(135deg,#0a2342,#1a237e);color:white;border-radius:10px;padding:15px 20px;margin-bottom:22px;">
+    <div style="font-size:13px;font-weight:700;margin-bottom:6px;">📊 8-Quarter Analysis — TXT (NYSE)</div>
+    <div style="font-size:11.5px;opacity:.93;line-height:1.7;">Textron Aviation completed a 28-day machinists' strike in Q3 2024, securing a 31% wage increase that compressed margins significantly. The post-strike production ramp (targeting +36% YoY in Q4 2024) is creating massive engineering bandwidth pressure. This is the most immediate Cyient opportunity: production ramp engineering support at Wichita.</div>
+  </div>
+
+  <div style="background:white;border-radius:10px;padding:18px;box-shadow:0 2px 8px rgba(0,0,0,0.08);margin-bottom:16px;">
+    <div style="font-size:13px;font-weight:700;margin-bottom:12px;color:#0a2342;">📈 Revenue, Margin &amp; R&amp;D Trend (Last 8 Quarters)</div>
+    <div style="overflow-x:auto;">
+      <table style="width:100%;border-collapse:collapse;font-size:11.5px;">
+        <thead>
+          <tr style="background:#0a2342;color:white;">
+            <th style="padding:8px 12px;text-align:left;">Quarter</th>
+            <th style="padding:8px 12px;text-align:right;">Revenue</th>
+            <th style="padding:8px 12px;text-align:right;">Op. Margin</th>
+            <th style="padding:8px 12px;text-align:right;">R&amp;D Spend</th>
+            <th style="padding:8px 12px;text-align:left;">Key Signal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background:white;"><td style="padding:7px 12px;border-bottom:1px solid #eee;">Q1 2024</td><td style="padding:7px 12px;text-align:right;border-bottom:1px solid #eee;">$1.42B</td><td style="padding:7px 12px;text-align:right;border-bottom:1px solid #eee;">12.3%</td><td style="padding:7px 12px;text-align:right;border-bottom:1px solid #eee;">$48M</td><td style="padding:7px 12px;border-bottom:1px solid #eee;">Strong backlog; Cessna Citation Longitude production steady; King Air fleet strong</td></tr>
+          <tr style="background:#f9fafb;"><td style="padding:7px 12px;border-bottom:1px solid #eee;">Q2 2024</td><td style="padding:7px 12px;text-align:right;border-bottom:1px solid #eee;">$1.51B</td><td style="padding:7px 12px;text-align:right;border-bottom:1px solid #eee;">12.8%</td><td style="padding:7px 12px;text-align:right;border-bottom:1px solid #eee;">$51M</td><td style="padding:7px 12px;border-bottom:1px solid #eee;">Pre-strike; labor contract negotiations begin; order book solid</td></tr>
+          <tr style="background:white;"><td style="padding:7px 12px;border-bottom:1px solid #eee;">Q3 2024</td><td style="padding:7px 12px;text-align:right;border-bottom:1px solid #eee;">$1.19B</td><td style="padding:7px 12px;text-align:right;border-bottom:1px solid #eee;">4.2%</td><td style="padding:7px 12px;text-align:right;border-bottom:1px solid #eee;">$38M</td><td style="padding:7px 12px;border-bottom:1px solid #eee;">28-day IAM machinists' strike (Aug 2024); $30M+ revenue impact; 737-like disruption</td></tr>
+          <tr style="background:#f9fafb;"><td style="padding:7px 12px;border-bottom:1px solid #eee;">Q4 2024</td><td style="padding:7px 12px;text-align:right;border-bottom:1px solid #eee;">$1.63B</td><td style="padding:7px 12px;text-align:right;border-bottom:1px solid #eee;">11.1%</td><td style="padding:7px 12px;text-align:right;border-bottom:1px solid #eee;">$52M</td><td style="padding:7px 12px;border-bottom:1px solid #eee;">Post-strike ramp: +36% production YoY; strong pent-up demand; labor cost headwinds</td></tr>
+          <tr style="background:white;"><td style="padding:7px 12px;border-bottom:1px solid #eee;">Q1 2025</td><td style="padding:7px 12px;text-align:right;border-bottom:1px solid #eee;">$1.48B</td><td style="padding:7px 12px;text-align:right;border-bottom:1px solid #eee;">10.5%</td><td style="padding:7px 12px;text-align:right;border-bottom:1px solid #eee;">$49M</td><td style="padding:7px 12px;border-bottom:1px solid #eee;">Wage integration ongoing (+31% labor cost); production efficiency rebuilding</td></tr>
+          <tr style="background:#f9fafb;"><td style="padding:7px 12px;border-bottom:1px solid #eee;">Q2 2025</td><td style="padding:7px 12px;text-align:right;border-bottom:1px solid #eee;">$1.57B</td><td style="padding:7px 12px;text-align:right;border-bottom:1px solid #eee;">11.2%</td><td style="padding:7px 12px;text-align:right;border-bottom:1px solid #eee;">$53M</td><td style="padding:7px 12px;border-bottom:1px solid #eee;">Cessna SkyCourier certification milestones; King Air deliveries recovering</td></tr>
+          <tr style="background:white;"><td style="padding:7px 12px;border-bottom:1px solid #eee;">Q3 2025</td><td style="padding:7px 12px;text-align:right;border-bottom:1px solid #eee;">$1.68B</td><td style="padding:7px 12px;text-align:right;border-bottom:1px solid #eee;">11.8%</td><td style="padding:7px 12px;text-align:right;border-bottom:1px solid #eee;">$56M</td><td style="padding:7px 12px;border-bottom:1px solid #eee;">Longitude ramp continues; Bell eVTOL synergies explored with Textron Aviation tech</td></tr>
+          <tr style="background:#f9fafb;"><td style="padding:7px 12px;border-bottom:1px solid #eee;">Q4 2025</td><td style="padding:7px 12px;text-align:right;border-bottom:1px solid #eee;">$1.74B</td><td style="padding:7px 12px;text-align:right;border-bottom:1px solid #eee;">12.4%</td><td style="padding:7px 12px;text-align:right;border-bottom:1px solid #eee;">$58M</td><td style="padding:7px 12px;border-bottom:1px solid #eee;">FY2025 guidance +11%; margin recovery on track; Beechcraft Denali first deliveries</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
+    <div style="background:white;border-radius:10px;padding:18px;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+      <div style="font-size:13px;font-weight:700;margin-bottom:12px;color:#0a2342;">⚠️ Margin Pressures &amp; Stress Signals</div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div style="padding:10px;background:#fff5f5;border-left:3px solid #c62828;border-radius:4px;"><div style="font-weight:700;color:#c62828;margin-bottom:4px;font-size:12px;">🔴 Post-Strike Labor Cost (+31% Wages)</div><div style="color:#555;line-height:1.6;font-size:11.5px;">31% wage increase locked in. Textron Aviation margins compressing. Engineering outsourcing is now a cost-reduction lever — cheaper than incremental Wichita headcount at elevated wages.</div></div>
+        <div style="padding:10px;background:#fff8e1;border-left:3px solid #f57f17;border-radius:4px;"><div style="font-weight:700;color:#f57f17;margin-bottom:4px;font-size:12px;">🟡 Production Ramp Engineering Bandwidth</div><div style="color:#555;line-height:1.6;font-size:11.5px;">Q4 2024 production was +36% YoY. Engineering headcount cannot scale as fast as production rate. Outsourced engineering delivery is the bridge.</div></div>
+        <div style="padding:10px;background:#fff8e1;border-left:3px solid #f57f17;border-radius:4px;"><div style="font-weight:700;color:#f57f17;margin-bottom:4px;font-size:12px;">🟡 Denali Certification Program</div><div style="color:#555;line-height:1.6;font-size:11.5px;">Beechcraft Denali (PT6E-66XT) first deliveries beginning FY2025. Certification tail and technical publications require sustained engineering support.</div></div>
+        <div style="padding:10px;background:#e8f5e9;border-left:3px solid #2e7d32;border-radius:4px;"><div style="font-weight:700;color:#2e7d32;margin-bottom:4px;font-size:12px;">🟢 King Air Avionics Retrofit (with Collins)</div><div style="color:#555;line-height:1.6;font-size:11.5px;">King Air retrofit program in partnership with Collins Aerospace. Avionics upgrade engineering required across ~6,000 global King Airs.</div></div>
+      </div>
+    </div>
+    <div style="background:white;border-radius:10px;padding:18px;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+      <div style="font-size:13px;font-weight:700;margin-bottom:12px;color:#0a2342;">🎯 Cyient Opportunity Signals</div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div style="padding:10px;background:#e8f0fe;border-left:3px solid #1a237e;border-radius:4px;"><div style="font-weight:700;color:#1a237e;margin-bottom:4px;font-size:12px;">💡 Production Ramp Engineering Support — HIGH</div><div style="color:#555;line-height:1.6;font-size:11.5px;">Wichita manufacturing engineering support: assembly work instructions, quality docs, process engineering. Post-strike environment makes outsourcing cost-effective vs. new hires at +31% wages.</div></div>
+        <div style="padding:10px;background:#e8f0fe;border-left:3px solid #1a237e;border-radius:4px;"><div style="font-weight:700;color:#1a237e;margin-bottom:4px;font-size:12px;">💡 Denali Technical Publications</div><div style="color:#555;line-height:1.6;font-size:11.5px;">AMM, AFM, SRM authoring for Beechcraft Denali. S1000D delivery from Hyderabad. Long-duration engagement aligned with fleet delivery ramp.</div></div>
+        <div style="padding:10px;background:#e8f0fe;border-left:3px solid #1a237e;border-radius:4px;"><div style="font-weight:700;color:#1a237e;margin-bottom:4px;font-size:12px;">💡 King Air Retrofit Documentation</div><div style="color:#555;line-height:1.6;font-size:11.5px;">Engineering documentation for King Air avionics retrofit. Coordinate with Collins Aerospace program. 6,000 aircraft fleet = substantial tech pubs opportunity.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding:12px 16px;background:#f0f4ff;border-radius:8px;font-size:11px;color:#555;line-height:1.6;">
+    <strong>Data sources:</strong> SEC 10-K/10-Q filings, company investor relations, MacroTrends, Yahoo Finance, Aviation Week, FlightGlobal, AIN Online. Last updated: April 2026.
+  </div>
+</div>
+<!-- END FINANCIAL SECTION -->
+
 </body>
 </html>
 
